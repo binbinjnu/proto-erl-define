@@ -1,0 +1,22 @@
+syntax = "proto3";
+package test;
+
+// 测试协议
+// 200002
+message c2s_test1
+{
+    int32 int_v = 1;
+    string string_v = 2;
+}
+
+message value {
+    int32 int_v = 1;
+}
+
+// 测试协议2
+// 200002
+message s2c_test1 
+{
+    int32 int_v = 1;
+    string string_v = 2;
+}
