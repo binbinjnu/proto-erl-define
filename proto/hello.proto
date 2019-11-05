@@ -1,9 +1,10 @@
 syntax = "proto3";
-package test;
+package hello;
+// base 101
 
 // 测试协议
-// 200002
-message c2s_test1
+// 10101
+message c2s_hello
 {
     int32 int_v = 1;
     string string_v = 2;
@@ -14,8 +15,8 @@ message value {
 }
 
 // 测试协议2
-// 200002
-message s2c_test1 
+// 10102
+message s2c_hello
 {
     int32 int_v = 1;
     string string_v = 2;
