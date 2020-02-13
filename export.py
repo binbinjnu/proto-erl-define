@@ -90,7 +90,7 @@ def _write_hrl(file_name):
 
                         define_name = next_line[7:]
                         line_text = '-define(' + define_name + \
-                            ', ' + define_value + ').\n'
+                                    ', ' + define_value + ').\n'
                         # print line_text
                         text = text + line_text
                     else:
@@ -131,15 +131,15 @@ def _write_erl(file_name):  # _write_proto_hrl 中各种判断, 此函数中可�
                 next_line = re.sub('{', '', next_line)
                 define_name = next_line[7:]
                 line_text_get = 'get(' + define_name + \
-                    ') -> {' + define_value + ', ' + package_name + '};\n'
+                                ') -> {' + define_value + ', ' + package_name + '};\n'
                 text_get = text_get + line_text_get
                 if next_line[7:10] == 'c2s':
                     line_text_get_c2s = 'get_c2s(' + define_value + \
-                        ') -> {' + define_name + ', ' + package_name + '};\n'
+                                        ') -> {' + define_name + ', ' + package_name + '};\n'
                     text_get_c2s = text_get_c2s + line_text_get_c2s
                 elif next_line[7:10] == 's2c':
                     line_text_get_sc2 = 'get_s2c(' + define_value + \
-                        ') -> {' + define_name + ', ' + package_name + '};\n'
+                                        ') -> {' + define_name + ', ' + package_name + '};\n'
                     text_get_s2c = text_get_s2c + line_text_get_sc2
             except ValueError:
                 pass
